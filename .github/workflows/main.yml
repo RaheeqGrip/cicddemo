@@ -1,0 +1,17 @@
+name: This is my first ci/cd pipeline
+
+on: 
+  push:
+    branches: main
+
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: My first step
+        uses: actions/checkout@v4
+
+      - name: Run echo
+        run: echo "This is devops"
