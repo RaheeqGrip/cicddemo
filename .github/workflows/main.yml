@@ -10,9 +10,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: My first step
+      - name: Initialize Repo
         uses: actions/checkout@v6
 
       - name: Run echo
         run: echo "This is devops"
-             uname -a
+             uname a
+
+      - name: Check docker installation
+        run: |
+          docker
+          docker images
+
+      - name: Run docker containner
+        run: |
+          docker run hello world
+      
